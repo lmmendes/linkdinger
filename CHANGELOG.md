@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/lmmendes/linkdinger/compare/linkdinger-v1.2.0...linkdinger-v1.3.0) (2026-01-03)
+
+
+### Features
+
+* new fix ([1187ccc](https://github.com/lmmendes/linkdinger/commit/1187cccb44fab3f15990030635347db320171336))
+
 ## [1.2.0](https://github.com/lmmendes/linkdinger/compare/linkdinger-v1.1.0...linkdinger-v1.2.0) (2026-01-03)
 
 
