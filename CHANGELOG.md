@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/lmmendes/linkdinger/compare/linkdinger-v1.1.0...linkdinger-v1.2.0) (2026-01-03)
+
+
+### Features
+
+* **cicd:** improved workflow ([46e46e3](https://github.com/lmmendes/linkdinger/commit/46e46e3b88d06c71e68444d70354ca06ada148d4))
+
 ## [1.1.0](https://github.com/lmmendes/linkdinger/compare/linkdinger-v1.0.0...linkdinger-v1.1.0) (2026-01-03)
 
 
