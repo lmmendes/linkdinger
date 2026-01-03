@@ -140,6 +140,28 @@ linkdinger/
 └── tsconfig.json
 ```
 
+## CI/CD
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+- **CI** (`ci.yml`) - Runs on PRs and pushes to main: type checking, Docker build validation
+- **Release Please** (`release-please.yml`) - Automates versioning and changelog generation using [conventional commits](https://www.conventionalcommits.org/)
+- **Publish** (`publish.yml`) - Builds and publishes Docker images on release
+
+### Docker Images
+
+Docker images are published to:
+- Docker Hub: [`lmmendes/linkdinger`](https://hub.docker.com/r/lmmendes/linkdinger)
+- GitHub Container Registry: `ghcr.io/lmmendes/linkdinger`
+
+### Required Secrets
+
+To enable Docker Hub publishing, add these secrets to your GitHub repository:
+- `DOCKERHUB_USERNAME` - Your Docker Hub username
+- `DOCKERHUB_TOKEN` - Your Docker Hub access token
+
+GitHub Container Registry publishing uses the built-in `GITHUB_TOKEN`.
+
 ## License
 
 MIT
