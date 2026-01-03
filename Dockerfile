@@ -13,19 +13,18 @@ RUN bun install --frozen-lockfile
 COPY . .
 
 # Production stage
-FROM oven/bun:1-slim AS production
+FROM oven/bun:1 AS production
 
 WORKDIR /app
 
-# Copy built application
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/src ./src
-COPY --from=builder /app/package.json ./
-
 # Create non-root user for security
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 botuser && \
-    chown -R botuser:nodejs /app
+RUN groupadd --system --gid 1001 botgroup && \
+    useradd --system --uid 1001 --gid botgroup botuser
+
+# Copy built application
+COPY --from=builder --chown=botuser:botgroup /app/node_modules ./node_modules
+COPY --from=builder --chown=botuser:botgroup /app/src ./src
+COPY --from=builder --chown=botuser:botgroup /app/package.json ./
 
 USER botuser
 
