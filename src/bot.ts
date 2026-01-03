@@ -39,7 +39,7 @@ bot.use(async (ctx, next) => {
  */
 bot.command("start", async (ctx) => {
   const welcomeMessage = `
-🔖 *Welcome to Linkdinger!*
+*Welcome to Linkdinger!*
 
 I help you save links to your Linkding instance.
 
@@ -108,10 +108,12 @@ bot.command("status", async (ctx) => {
     if (isConnected) {
       await ctx.reply(
         `✅ *Connected to Linkding*\n\nInstance: \`${config.linkding.url}\``,
-        { parse_mode: "Markdown" }
+        { parse_mode: "Markdown" },
       );
     } else {
-      await ctx.reply("❌ Failed to connect to Linkding. Check your configuration.");
+      await ctx.reply(
+        "❌ Failed to connect to Linkding. Check your configuration.",
+      );
     }
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
@@ -127,7 +129,7 @@ bot.command("recent", async (ctx) => {
     const response = await linkding.listBookmarks({ limit: 5 });
 
     if (response.results.length === 0) {
-      await ctx.reply("📭 No bookmarks found.");
+      await ctx.reply("📚 No bookmarks found.");
       return;
     }
 
@@ -223,7 +225,7 @@ bot.on("message:text", async (ctx) => {
 
   if (!urls || urls.length === 0) {
     await ctx.reply(
-      "🤔 I couldn't find any URLs in your message. Send me a link to save it!"
+      "🤔 I couldn't find any URLs in your message. Send me a link to save it!",
     );
     return;
   }
@@ -256,7 +258,7 @@ async function processUrl(
   ctx: Context,
   url: string,
   tags: string[],
-  notes: string
+  notes: string,
 ): Promise<void> {
   try {
     // Check if URL already exists
@@ -275,12 +277,18 @@ async function processUrl(
 
         await ctx.reply(
           `🔄 *Updated existing bookmark:*\n\n[${escapeMarkdown(checkResult.bookmark.title || url)}](${url})\n\nTags: ${newTags.map((t) => `#${t}`).join(" ") || "none"}`,
-          { parse_mode: "Markdown", link_preview_options: { is_disabled: true } }
+          {
+            parse_mode: "Markdown",
+            link_preview_options: { is_disabled: true },
+          },
         );
       } else {
         await ctx.reply(
           `ℹ️ *Already bookmarked:*\n\n[${escapeMarkdown(checkResult.bookmark.title || url)}](${url})\n\nTags: ${existingTags.map((t) => `#${t}`).join(" ") || "none"}`,
-          { parse_mode: "Markdown", link_preview_options: { is_disabled: true } }
+          {
+            parse_mode: "Markdown",
+            link_preview_options: { is_disabled: true },
+          },
         );
       }
       return;
@@ -301,7 +309,7 @@ async function processUrl(
 
     await ctx.reply(
       `✅ *Saved!*\n\n[${escapeMarkdown(bookmark.title || url)}](${url})\n\nTags: ${tagDisplay}`,
-      { parse_mode: "Markdown", link_preview_options: { is_disabled: true } }
+      { parse_mode: "Markdown", link_preview_options: { is_disabled: true } },
     );
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
@@ -332,4 +340,3 @@ bot.catch((err) => {
     console.error("Unknown error:", e);
   }
 });
-

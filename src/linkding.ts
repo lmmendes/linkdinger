@@ -73,7 +73,7 @@ class LinkdingClient {
 
   private async request<T>(
     endpoint: string,
-    options: RequestInit = {}
+    options: RequestInit = {},
   ): Promise<T> {
     const url = `${this.baseUrl}/api${endpoint}`;
     const headers = {
@@ -90,7 +90,7 @@ class LinkdingClient {
     if (!response.ok) {
       const errorText = await response.text();
       throw new Error(
-        `Linkding API error: ${response.status} ${response.statusText} - ${errorText}`
+        `Linkding API error: ${response.status} ${response.statusText} - ${errorText}`,
       );
     }
 
@@ -109,7 +109,7 @@ class LinkdingClient {
   async checkBookmark(url: string): Promise<CheckBookmarkResponse> {
     const encodedUrl = encodeURIComponent(url);
     return this.request<CheckBookmarkResponse>(
-      `/bookmarks/check/?url=${encodedUrl}`
+      `/bookmarks/check/?url=${encodedUrl}`,
     );
   }
 
@@ -145,7 +145,7 @@ class LinkdingClient {
 
     const query = searchParams.toString();
     return this.request<BookmarkListResponse>(
-      `/bookmarks/${query ? `?${query}` : ""}`
+      `/bookmarks/${query ? `?${query}` : ""}`,
     );
   }
 
@@ -181,7 +181,7 @@ class LinkdingClient {
    */
   async updateBookmark(
     id: number,
-    payload: Partial<CreateBookmarkPayload>
+    payload: Partial<CreateBookmarkPayload>,
   ): Promise<Bookmark> {
     return this.request<Bookmark>(`/bookmarks/${id}/`, {
       method: "PATCH",
@@ -219,4 +219,3 @@ class LinkdingClient {
 
 // Export a singleton instance
 export const linkding = new LinkdingClient();
-

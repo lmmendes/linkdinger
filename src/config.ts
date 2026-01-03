@@ -21,11 +21,11 @@ export const config = {
     apiToken: getEnvVar("LINKDING_API_TOKEN", true),
   },
   // Optional: Restrict bot to specific users (comma-separated Telegram user IDs)
-  allowedUsers: getEnvVar("LINKDING_ALLOWED_USERS")
-    ?.split(",")
-    .map((id) => parseInt(id.trim(), 10))
-    .filter((id) => !isNaN(id)) ?? [],
+  allowedUsers:
+    getEnvVar("LINKDING_ALLOWED_USERS")
+      ?.split(",")
+      .map((id) => parseInt(id.trim(), 10))
+      .filter((id) => !isNaN(id)) ?? [],
 } as const;
 
 export type Config = typeof config;
-
