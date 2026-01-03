@@ -1,0 +1,18 @@
+services:
+  linkdinger:
+    build: .
+    container_name: linkdinger
+    restart: unless-stopped
+    environment:
+      # Required: Your Telegram bot token from @BotFather
+      - LINKDING_TELEGRAM_BOT_TOKEN=${LINKDING_TELEGRAM_BOT_TOKEN}
+      # Required: Your Linkding instance URL
+      - LINKDING_URL=${LINKDING_URL}
+      # Required: Your Linkding API token (from Settings > Integrations)
+      - LINKDING_API_TOKEN=${LINKDING_API_TOKEN}
+      # Optional: Comma-separated list of allowed Telegram user IDs
+      - LINKDING_ALLOWED_USERS=${LINKDING_ALLOWED_USERS:-}
+    # Uncomment to use .env file instead of environment variables
+    # env_file:
+    #   - .env
+

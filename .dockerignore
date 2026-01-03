@@ -1,0 +1,26 @@
+# Dependencies
+node_modules
+
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Documentation
+README.md
+docs/
+
+# Build artifacts
+dist/
+*.log
+
