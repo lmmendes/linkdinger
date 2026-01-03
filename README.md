@@ -145,8 +145,7 @@ linkdinger/
 This project uses GitHub Actions for continuous integration and deployment:
 
 - **CI** (`ci.yml`) - Runs on PRs and pushes to main: type checking, Docker build validation
-- **Release Please** (`release-please.yml`) - Automates versioning and changelog generation using [conventional commits](https://www.conventionalcommits.org/)
-- **Publish** (`publish.yml`) - Builds and publishes Docker images on release
+- **Release** (`release-please.yml`) - Automates versioning using [conventional commits](https://www.conventionalcommits.org/) and publishes Docker images when a release is created
 
 ### Docker Images
 
