@@ -14,14 +14,14 @@ function getEnvVar(name: string, required = false): string | undefined {
 
 export const config = {
   telegram: {
-    botToken: getEnvVar("TELEGRAM_BOT_TOKEN", true),
+    botToken: getEnvVar("LINKDING_TELEGRAM_BOT_TOKEN", true),
   },
   linkding: {
     url: getEnvVar("LINKDING_URL", true).replace(/\/$/, ""), // Remove trailing slash
     apiToken: getEnvVar("LINKDING_API_TOKEN", true),
   },
   // Optional: Restrict bot to specific users (comma-separated Telegram user IDs)
-  allowedUsers: getEnvVar("ALLOWED_USERS")
+  allowedUsers: getEnvVar("LINKDING_ALLOWED_USERS")
     ?.split(",")
     .map((id) => parseInt(id.trim(), 10))
     .filter((id) => !isNaN(id)) ?? [],

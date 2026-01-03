@@ -30,10 +30,10 @@ A Telegram bot that saves links directly to your [Linkding](https://github.com/s
 
 2. Create a `.env` file with your configuration:
    ```bash
-   TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+   LINKDING_TELEGRAM_BOT_TOKEN=your_telegram_bot_token
    LINKDING_URL=https://linkding.example.com
    LINKDING_API_TOKEN=your_linkding_api_token
-   ALLOWED_USERS=  # Optional: comma-separated Telegram user IDs
+   LINKDING_ALLOWED_USERS=  # Optional: comma-separated Telegram user IDs
    ```
 
 3. Start the bot:
@@ -49,7 +49,7 @@ docker build -t linkdinger .
 docker run -d \
   --name linkdinger \
   --restart unless-stopped \
-  -e TELEGRAM_BOT_TOKEN=your_token \
+  -e LINKDING_TELEGRAM_BOT_TOKEN=your_token \
   -e LINKDING_URL=https://linkding.example.com \
   -e LINKDING_API_TOKEN=your_linkding_token \
   linkdinger
@@ -64,7 +64,7 @@ docker run -d \
 
 2. Set environment variables:
    ```bash
-   export TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+   export LINKDING_TELEGRAM_BOT_TOKEN=your_telegram_bot_token
    export LINKDING_URL=https://linkding.example.com
    export LINKDING_API_TOKEN=your_linkding_api_token
    ```
@@ -78,10 +78,10 @@ docker run -d \
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `TELEGRAM_BOT_TOKEN` | ✅ | Your Telegram bot token from @BotFather |
+| `LINKDING_TELEGRAM_BOT_TOKEN` | ✅ | Your Telegram bot token from @BotFather |
 | `LINKDING_URL` | ✅ | URL of your Linkding instance (e.g., `https://linkding.example.com`) |
 | `LINKDING_API_TOKEN` | ✅ | API token from Linkding (Settings → Integrations) |
-| `ALLOWED_USERS` | ❌ | Comma-separated list of Telegram user IDs allowed to use the bot. Leave empty to allow everyone. |
+| `LINKDING_ALLOWED_USERS` | ❌ | Comma-separated list of Telegram user IDs allowed to use the bot. Leave empty to allow everyone. |
 
 ## Bot Commands
 
