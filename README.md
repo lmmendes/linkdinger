@@ -79,7 +79,7 @@ docker run -d \
 ## Environment Variables
 
 | Variable | Required | Description |
-|----------|----------|-------------|
+|----------|:----------:|-------------|
 | `LINKDING_TELEGRAM_BOT_TOKEN` | ✅ | Your Telegram bot token from @BotFather |
 | `LINKDING_URL` | ✅ | URL of your Linkding instance (e.g., `https://linkding.example.com`) |
 | `LINKDING_API_TOKEN` | ✅ | API token from Linkding (Settings → Integrations) |
