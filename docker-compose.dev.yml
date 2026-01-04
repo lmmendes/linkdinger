@@ -1,6 +1,6 @@
 services:
   linkdinger:
-    image: lmmendes/linkdinger:latest
+    build: .
     container_name: linkdinger
     restart: unless-stopped
     environment:
