@@ -20,7 +20,7 @@ A Telegram bot that saves links directly to your [Linkding](https://github.com/s
 
 ## Quick Start with Docker
 
-Docker images are published to [Docker Hub](https://hub.docker.com/r/lmmendes/linkdinger) and (GitHub Packages)[https://github.com/lmmendes/linkdinger/pkgs/container/linkdinger].
+Docker images are published to [Docker Hub](https://hub.docker.com/r/lmmendes/linkdinger) and [GitHub Packages](https://github.com/lmmendes/linkdinger/pkgs/container/linkdinger).
 
 ### Using Docker Compose (Recommended)
 
