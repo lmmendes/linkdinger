@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.3](https://github.com/lmmendes/linkdinger/compare/v1.0.2...v1.0.3) (2026-01-04)
+
+
+### Documentation
+
+* add information about docker registries ([54d3cbf](https://github.com/lmmendes/linkdinger/commit/54d3cbfd3e900e3fdfff992aa5241033280a37c9))
+* center required table ([58362c9](https://github.com/lmmendes/linkdinger/commit/58362c9e640c9410aadfdc5d7783a8952425f570))
+* fix typo ([8c76841](https://github.com/lmmendes/linkdinger/commit/8c7684120700748f81624b78c33503586435d9ed))
+
 ## [1.0.2](https://github.com/lmmendes/linkdinger/compare/v1.0.1...v1.0.2) (2026-01-03)
 
 
