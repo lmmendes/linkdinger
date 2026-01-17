@@ -1,6 +1,6 @@
 {
   "name": "linkdinger",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Telegram bot that saves links to Linkding",
   "type": "module",
   "main": "src/index.ts",

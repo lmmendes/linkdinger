@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.4](https://github.com/lmmendes/linkdinger/compare/v1.0.3...v1.0.4) (2026-01-17)
+
+
+### Documentation
+
+* Fixing formating of the readmed.md ([a6a00de](https://github.com/lmmendes/linkdinger/commit/a6a00de9c65ed5ccf416cdbf470f47849c4505a1))
+* **security:** Added security.md file with guidelines ([348a71b](https://github.com/lmmendes/linkdinger/commit/348a71b66d67d051516d2406eec8e5d8ecec5a44))
+
+
+### Miscellaneous
+
+* **security:** Security hardening - actions/missing-workflow-permissions ([34c2277](https://github.com/lmmendes/linkdinger/commit/34c2277049fe0e3ad4e49a09afc744732223e7ef))
+
 ## [1.0.3](https://github.com/lmmendes/linkdinger/compare/v1.0.2...v1.0.3) (2026-01-04)
 
 
