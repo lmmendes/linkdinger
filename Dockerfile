@@ -33,7 +33,7 @@ ENV NODE_ENV=production
 
 # Health check - verify the process is running
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD pgrep -f "bun" > /dev/null || exit 1
+    CMD pidof bun | grep -qw 1 || exit 1
 
 # Run the bot
 CMD ["bun", "run", "src/index.ts"]
