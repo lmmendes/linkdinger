@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/lmmendes/linkdinger/compare/v1.0.4...v1.0.5) (2026-03-26)
+
+
+### Miscellaneous
+
+* release 1.0.5 ([3bf3652](https://github.com/lmmendes/linkdinger/commit/3bf365258344d9f82ad570dd1f80597915076e00))
+
 ## [1.0.4](https://github.com/lmmendes/linkdinger/compare/v1.0.3...v1.0.4) (2026-01-17)
 
 
